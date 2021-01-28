@@ -3,12 +3,13 @@ import styles from '../styles/header/header.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faBell } from '@fortawesome/free-solid-svg-icons';
 import { Grid, Hidden } from '@material-ui/core';
+import PropTypes from 'prop-types';
 
-const Header = () => {
+const Header = ({ title }) => {
   return (
     <Grid container className={styles.header}>
       <Grid item xs={12} md={7}>
-        <p className={styles.title}>Covid 19 Tracker - Sockan Academy</p>
+        <p className={styles.title}>{title}</p>
       </Grid>
       <Grid item xs={12} md={5} container>
       <Grid item xs={6} md={5} className={styles.icons}>
@@ -25,5 +26,13 @@ const Header = () => {
     </Grid>
   );
 };
+
+Header.PropTypes = {
+  title: PropTypes.string
+}
+
+Header.defaultProps = {
+  title: 'Covid 19 Tracker'
+}
 
 export default Header;

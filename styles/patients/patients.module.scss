@@ -1,0 +1,117 @@
+@import '../sidebar/sidebarvariables';
+
+.huh {
+  background: #FFFFFF;
+
+  border: 1px solid #DFE0EB;
+  box-sizing: border-box;
+  border-radius: 8px;
+
+  .title {
+          /* Bold 19 (0.4 px) */
+
+      font-family: $mulish;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 19px;
+      line-height: 24px;
+      /* identical to box height */
+
+      letter-spacing: 0.4px;
+
+      /* grayscale / black */
+
+      color: #252733;
+
+      margin: 30px 20px;
+  }
+}
+
+.tableheadcell {
+
+  p {
+  font-family: $mulish;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  /* identical to box height */
+
+  letter-spacing: 0.2px;
+
+  /* grayscale / gray */
+
+  color: #9FA2B4;
+
+  margin: 0px;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  // justify-content: space-around;
+}
+
+.upText {
+  font-family: $mulish;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+
+  letter-spacing: 0.2px;
+
+  /* grayscale / black */
+
+  color: #252733;
+
+  margin: 3px 0px;
+}
+
+.downText {
+  font-family: $mulish;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  /* identical to box height, or 133% */
+
+  letter-spacing: 0.1px;
+
+  /* grayscale / gray light */
+
+  color: #C5C7CD;
+
+  margin: 0px;
+}
+
+.chip {
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 14px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+
+  // background: #F12B2C;
+  border-radius: 100px;
+
+  height: 24px;
+  width: fit-content;
+
+  padding: 10px;
+  margin: 0;
+
+  /* grayscale / white */
+
+  color: #FFFFFF;
+}

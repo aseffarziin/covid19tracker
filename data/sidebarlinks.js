@@ -10,7 +10,7 @@ export const links = [
   {
     icon: <FontAwesomeIcon icon={faTicketAlt} />,
     title: 'Users',
-    href: '/Thomas',
+    href: '/Patients',
   },
   {
     icon: <FontAwesomeIcon icon={faLightbulb} />,

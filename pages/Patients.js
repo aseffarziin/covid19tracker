@@ -3,15 +3,15 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.scss';
 import Sidebar from './../components/Sidebar';
 import { Grid, Hidden } from '@material-ui/core';
+import AllPatients from '../components/AllPatients';
 import Header from '../components/Header';
-import Cards from '../components/Cards';
 
-const Overview = () => {
+
+const Patients = () => {
   return (
-    <div>
       <div>
         <Head>
-          <title>Overview</title>
+          <title>Patients</title>
         </Head>
         <Grid container direciton="row">
           <Hidden only={(['xs'], ['sm'])}>
@@ -20,13 +20,12 @@ const Overview = () => {
             </Grid>
           </Hidden>
           <Grid item xs={12} md={10} className={styles.rightGrid}>
-            <Header title='Covid 19 Tracker - Sokan Edition' />
-            <Cards />
+            <Header title='Patients' style={{margin: '40px auto'}} />
+            <AllPatients />
           </Grid>
         </Grid>
       </div>
-    </div>
   );
 };
 
-export default Overview;
+export default Patients;
