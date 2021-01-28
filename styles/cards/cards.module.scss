@@ -1,0 +1,72 @@
+@import '../sidebar/sidebarvariables';
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+  width: 100%;
+
+  margin: 40px auto;
+
+  .cardContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    padding: 10px;
+
+
+  .card {
+    background: #FFFFFF;
+
+    border: 1px solid #DFE0EB;
+    box-sizing: border-box;
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    height: 134px;
+    width: 260px;
+
+    // margin: auto 5px;
+
+  }
+
+  .tag {
+    font-family: $mulish;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 24px;
+    /* identical to box height */
+
+    text-align: center;
+    letter-spacing: 0.4px;
+    margin: 0px;
+
+    /* grayscale / gray */
+
+    color: #9FA2B4;
+  }
+
+  .number {
+    font-family: $mulish;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+    letter-spacing: 1px;
+
+    /* grayscale / black */
+
+    color: #252733;
+
+    margin: 0px;
+  }
+ }
+}

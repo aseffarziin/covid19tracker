@@ -5,7 +5,7 @@ export const links = [
   {
     icon: <FontAwesomeIcon icon={faChartPie} />,
     title: 'Overview',
-    href: '/',
+    href: '/Overview',
   },
   {
     icon: <FontAwesomeIcon icon={faTicketAlt} />,

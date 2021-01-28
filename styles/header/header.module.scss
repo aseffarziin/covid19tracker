@@ -1,0 +1,60 @@
+@import '../sidebar/sidebarvariables';
+
+.header {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  .name {
+    font-family: $mulish;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+
+    text-align: right;
+    letter-spacing: 0.2px;
+
+    color: #252733;
+  }
+
+  .profileDetails {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+ 
+      .avatar {
+        height: 45px;
+        width: 45px;
+        border-radius: 50%;
+      }
+  }
+
+  .icons {
+    @extend .profileDetails;
+    border-right: 1px solid #DFE0EB;
+
+    .headerIcons {
+      color: #C5C7CD;
+      width: 14px;
+      height: 16px;
+    }
+  }
+
+  .title {
+    font-family: $mulish;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 0.3px;
+
+    /* grayscale / black */
+
+    color: #252733;
+  }
+}
