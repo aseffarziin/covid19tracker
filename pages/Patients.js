@@ -5,6 +5,7 @@ import Sidebar from './../components/Sidebar';
 import { Grid, Hidden } from '@material-ui/core';
 import AllPatients from '../components/AllPatients';
 import Header from '../components/Header';
+import AddButton from '../components/AddButton';
 
 
 const Patients = () => {
