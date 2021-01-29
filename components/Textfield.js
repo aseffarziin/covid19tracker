@@ -7,7 +7,7 @@ const Textfield = ({ ...props }) => {
   }
   return (
     <>
-    <TextField type='text' size='small' variant='outlined' {...props} style={style} />
+    <TextField type='text' size='small' variant='outlined' {...props} style={style} required />
     </>
   )
 }

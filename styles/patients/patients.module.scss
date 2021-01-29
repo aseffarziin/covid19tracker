@@ -74,6 +74,18 @@
   }
 }
 
+.delete_button {
+  position: absolute;
+  right: 20px;
+  top: 30px;
+  color: #9FA2B4;
+  opacity: 0.5;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 .titletwo {
   font-family: Mulish;
   font-style: normal;

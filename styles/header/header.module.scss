@@ -39,11 +39,16 @@
   .icons {
     @extend .profileDetails;
     border-right: 1px solid #DFE0EB;
+    justify-content: flex-end;
 
     .headerIcons {
       color: #C5C7CD;
       width: 14px;
       height: 16px;
+
+      &:last-child {
+        margin: auto 30px;
+      }
     }
   }
 

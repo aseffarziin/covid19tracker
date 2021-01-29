@@ -7,6 +7,7 @@ const AddButton = ({ ...props}) => {
 
       <style jsx>{`
         .plus-button {
+          opacity: 0.8;
           border: 2px solid red;
           font-size: 22px;
           background-color: red;
@@ -16,8 +17,8 @@ const AddButton = ({ ...props}) => {
           border-radius: 999px;
           display: fixed;
           position: fixed;
-          right: 40px;
-          bottom: 40px;
+          right: 20px;
+          bottom: 20px;
           transition: 0.3s;
         }
           .plus-button:after,

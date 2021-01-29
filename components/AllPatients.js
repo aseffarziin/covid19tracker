@@ -18,6 +18,7 @@ import AddButton from './AddButton'
 import Textfield from './Textfield';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import AddForm from './AddForm';
 
 const select = (a) => {
   if (a === 'high') return '#F12B2C'
@@ -26,7 +27,12 @@ const select = (a) => {
 }
 
 const Patients = () => {
+  const [list, setList] = useState([...PatientsList])
   const [show, setShow] = useState(false);
+  const deleteButton = index => {
+    list.splice(index, 1)
+    setList([...list]);
+  }
   return (
     <>
     <TableContainer className={styles.huh}>
@@ -38,12 +44,11 @@ const Patients = () => {
             <THCell>Birth Details</THCell>
             <THCell>Registeration Date </THCell>
             <THCell>Infection Level</THCell>
-            {/* <THCell>Protein&nbsp;(g)</THCell> */}
           </TableRow>
         </TableHead>
         <TableBody>
-          {PatientsList.map((p) => (
-            <TableRow key={p.name}>
+          {list.map((p, index) => (
+            <TableRow key={index} style={{position: 'relative'}}>
               <TableCell
                 style={{
                   display: 'flex',
@@ -61,10 +66,11 @@ const Patients = () => {
               <TableCell>
                 <TTypography upText={p.regisDate} downText={p.regisTime} />
               </TableCell>
-              <TableCell>
+              <TableCell style={{position: 'relative'}}>
                 <Chip bg={select(p.infection)}>
                   {p.infection}
                 </Chip>
+              <FontAwesomeIcon icon={faTimes} onClick={() => deleteButton(index)} className={styles.delete_button} />
               </TableCell>
             </TableRow>
           ))}
@@ -72,31 +78,49 @@ const Patients = () => {
       </Table>
     </TableContainer>
     {
-      show ? <AddForm show={show} setShow={setShow} /> : <AddButton onClick={() => setShow(true)} />
+      show ? (<AddForm show={show} setShow={setShow} list={list} setList={setList} />
+        ) : (
+        <AddButton onClick={() => setShow(true)} />
+        )
     }
-      {/* <AddButton onClick={() => setShow(!show)} /> */}
     </>
   );
 }
 
 export default Patients;
 
-export const AddForm = ({ show, setShow }) => {
-  return (
-    <div className={styles.form_container}>
-    <form className={styles.form}>
-      <p onClick={() => setShow(false)} className={styles.close_button} >
-        <FontAwesomeIcon icon={faTimes} />
-        </p>
-      <p className={styles.titletwo}>Add Patient</p>
-      <Textfield label='Name' />
-      <Textfield label='Birthday' />
-      <Textfield label='City' />
-      <Textfield label='Registeration Date' />
-      <Textfield label='Registeration Time' />
-      <Textfield label='Infection Level' />
-      <Button type='submit' variant='outlined' className={styles.sub_button}>submit</Button>
-    </form>
-    </div>
-  )
-}
+// export const AddForm = ({ show, setShow, list, setList }) => {
+//   const user = {
+//     name: '',
+//     city: '',
+//     birthday: '',
+//     regisDate: '',
+//     regisTime: '',
+//     infection: '',
+//   }
+//   const [newUser, setNewUser] = useState({...user})
+
+//   const submitHandler = (e) => {
+//     e.preventDefault();
+//     setList([...list, newUser]);
+//     setNewUser({...user});
+//     setShow(false);
+//   }
+//   return (
+//     <div className={styles.form_container}>
+//     <form className={styles.form} onSubmit={(e) => submitHandler(e)}>
+//       <p onClick={() => setShow(false)} className={styles.close_button} >
+//         <FontAwesomeIcon icon={faTimes} />
+//         </p>
+//       <p className={styles.titletwo}>Add Patient</p>
+//       <Textfield label='Name' value={newUser.name} onChange={(e) => setNewUser({...newUser, name: e.target.value})} />
+//       <Textfield label='Birthday' value={newUser.birthday} onChange={(e) => setNewUser({...newUser, birthday: e.target.value})} />
+//       <Textfield label='City' value={newUser.city} onChange={(e) => setNewUser({...newUser, city: e.target.value})} />
+//       <Textfield label='Registeration Date' value={newUser.regisDate} onChange={(e) => setNewUser({...newUser, regisDate: e.target.value})} />
+//       <Textfield label='Registeration Time' value={newUser.regisTime} onChange={(e) => setNewUser({...newUser, regisTime: e.target.value})} />
+//       <Textfield label='Infection Level' value={newUser.infection} onChange={(e) => setNewUser({...newUser, infection: e.target.value})} />
+//       <Button type='submit' variant='outlined' className={styles.sub_button}>submit</Button>
+//     </form>
+//     </div>
+//   )
+// }
