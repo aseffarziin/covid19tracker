@@ -1,5 +1,5 @@
-@import './sidebarmixins';
-@import './sidebarvariables';
+@import '../variables';
+@import '../mixins';
 
 .sidebar {
   position: absolute;
