@@ -23,6 +23,10 @@
     flex-direction: row;
     justify-content: center;
     margin: 40px auto;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }
 
 .sidebarList {
@@ -55,4 +59,24 @@
     opacity: $active-opacity;
   }
 }
+}
+
+.logoCircle {
+  background: #3751FF;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.logoSemicircle {
+  width: 12px;
+  height: 14px;
+  transform: translate(15%);
+  border-radius: 0px 150px 150px 0px;
+  background: linear-gradient(143.7deg, rgba(255, 255, 255, 0.7) 0%, #FFFFFF 100%);
 }

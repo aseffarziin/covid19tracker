@@ -6,6 +6,9 @@ const Sidebar = () => {
   return (
     <div className={styles.sidebar}>
       <div className={styles.covidtracker}>
+        <div className={styles.logoCircle}>
+          <div className={styles.logoSemicircle}></div>
+        </div>
         Covid 19 Tracker
       </div>
       <SidebarList />
