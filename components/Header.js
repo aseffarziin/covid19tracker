@@ -17,7 +17,7 @@ const Header = ({ title }) => {
         <FontAwesomeIcon icon={faBell} className={styles.headerIcons} />
       </Grid>
       <Grid item xs={6} md={6} className={styles.profileDetails}>
-        <p classNam={styles.name}>Jonas sawimbey</p>
+        <p classNam={styles.name}>Jones Ferdinand</p>
         <img src="propic.png" className={styles.avatar} />
       </Grid>
       </Grid>
