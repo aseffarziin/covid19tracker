@@ -33,9 +33,9 @@ const Cards = () => {
         </div>
       </Grid>
       <Grid item xs={12} sm={6} md={4} lg={3} className={styles.cardContainer}>
-        <div className={styles.card}>
-          <p className={styles.tag}>Active</p>
-          <p className={styles.number}>
+        <div className={styles.activeCard}>
+          <p className={styles.activeTag}>Active</p>
+          <p className={styles.activeNumber}>
             {separate(data.TotalConfirmed - data.TotalRecovered)}
           </p>
         </div>

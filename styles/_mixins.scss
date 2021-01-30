@@ -28,3 +28,37 @@
 
   color: #252733;
 }
+
+@mixin tag ($color: #9FA2B4) {
+  font-family: $mulish;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 24px;
+  /* identical to box height */
+
+  text-align: center;
+  letter-spacing: 0.4px;
+  margin: 0px;
+
+  /* grayscale / gray */
+
+  color: $color;
+}
+
+@mixin number ($color: #252733) {
+  font-family: $mulish;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 50px;
+  text-align: center;
+  letter-spacing: 1px;
+
+  /* grayscale / black */
+
+  color: $color;
+
+  margin: 0px;
+
+}

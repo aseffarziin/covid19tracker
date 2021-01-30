@@ -1,4 +1,5 @@
 @import '../variables';
+@import '../mixins';
 
 .cards {
   display: flex;
@@ -12,7 +13,7 @@
     flex-direction: row;
     justify-content: center;
 
-
+ 
   .card {
     background: #FFFFFF;
 
@@ -35,37 +36,25 @@
 
   }
 
+  .activeCard {
+    @extend .card;
+    border: 1px solid #3751FF;
+  }
+
   .tag {
-    font-family: $mulish;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 19px;
-    line-height: 24px;
-    /* identical to box height */
-
-    text-align: center;
-    letter-spacing: 0.4px;
-    margin: 0px;
-
-    /* grayscale / gray */
-
-    color: #9FA2B4;
+    @include tag;
   }
 
   .number {
-    font-family: $mulish;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 40px;
-    line-height: 50px;
-    text-align: center;
-    letter-spacing: 1px;
-
-    /* grayscale / black */
-
-    color: #252733;
-
-    margin: 0px;
+    @include number;
   }
+ }
+
+ .activeTag {
+   @include tag(#3751FF);
+ }
+
+ .activeNumber {
+   @include number(#3751FF)
  }
 }
